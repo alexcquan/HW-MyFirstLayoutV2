@@ -1,73 +1,212 @@
 body {
-    color: rgb(223, 223, 223);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 17pt;
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-}
-
-h1 {
-    color: #ffffff;
-    text-align: center;
-    font-family: cursive;
-    font-size: 36pt;
-}
-
-h2 {
-    color: mintcream;
-    margin: auto;
-    padding-left: 1%;
-    font-family: fantasy;
-    font-size: 24pt;
-}
-
-h3 { 
-    font-family: fantasy;
-    font-size: 20pt;
-}
-
-li {
-    font-family: fantasy;
-    font-size: 17pt;
-}
-html{
-    background: radial-gradient(rgb(0, 181, 212)0%,rgb(0, 0, 0)100%);
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-p{
-    text-align: left;
+/*Navigation*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+    "navBar . navigation";
+    background-image: linear-gradient(to right, black,rgb(0, 181, 212));
+    padding-left: 20px;
+}
+
+#navbar{
+    grid-area: navBar;
+}
+
+#navigation{
+    grid-area: navigation;
+}
+
+.navBar h1 {
+    width: 25%;
+    font-weight: 500;
+}
+
+.navBar a {
+    grid-area: a;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+#navigation{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.active{
+    color:white;
+}
+
+/*Page Header CSS*/
+.header h2{
+    text-align: center;
+    padding: 5px;
+}
+
+/*Hero Grid CSS*/
+.heroGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    grid-template-areas:
+    "aboutMe myPicture"
+    "interestingFacts myPicture"
+    "socialMedia myPicture";
+    margin:5%;
+}
+
+.aboutMe{
+    grid-area: aboutMe;
+    
+}
+.myPicture{
+    grid-area: myPicture;
+    
+  
+}
+.myPicture img{
+    max-width:100%;
+    
+}
+.interestingFacts{
+    grid-area: interestingFacts;
+    
+}
+.socialMedia{
+    grid-area: socialMedia;
+    
+}
+
+/*List CSS*/
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+
+.navlist{
     font-family: fantasy;
     font-size: 17pt;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding: 20px;
+    margin: 5%;
 }
 
-div{
-    text-align: center;
-    margin: auto;
-    padding: 2%;
-}
-
-img{
-    max-width: 200px;
-    align-content: center;
-    float: right;
-    padding: 2%;
-    text-shadow: 10px;
+.interest{
+    font-family: fantasy;
+    font-size: 17pt;
 }
 
 ol {
     padding-left: 5%;
-    text-align: left;  
+    text-align: left; 
+    list-style-type: none;
 }
 
-i {
-    color:blue;
-    padding: 5px;
+/*Case Study Grid CSS*/
+.caseStudyGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px;
+    grid-template-areas: 
+    "study1 study2 study3";
+    margin: 5%;
+    padding: 10px;
+}
+
+.study1{
+    grid-area: study1;
+    background-image: url(../images/GDQ\ Versions.png);
+    background-size: cover;
+}
+
+.study2{
+    grid-area: study2;
+    background-color: blue;
+}
+
+.study3{
+    grid-area: study3;
+    background-color: green;
+}
+
+/*Typography*/
+h1 {
+    display: flex;
+    color: white;
+    font-family: cursive;
+}
+
+h2 {
+    color: #1B6682;
+    font-family: fantasy;
+    font-size: 24pt;
+}
+
+.header h2{
+    padding-top: 20px;
+    font-family: cursive;
+}
+h3 {
+    color: #1B6682;
+    font-family: fantasy;
+    font-size: 20pt;
+}
+
+.heroGrid h3 {
+    margin:0;
+}
+
+.caseStudy h3{
+    text-align: center;
+}
+
+p{
+    display: block;
+    text-align: left;
+    font-family: fantasy;
+    font-size: 17pt;
+    padding:0 4%;
+}
+
+.caseStudyGrid p{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8); 
+    padding-top: 4px;   
+}
+
+/*Button CSS*/
+button{
+    width: 100%;
+    height: 50px;
+}
+
+/*Media Query*/
+@media only screen and (max-width:600px){
+.caseStudyGrid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas:
+    "study 1"
+    "study 2"
+    "study 3";
+    margin: 5%;
+    padding: 10px;
+}
+
 }
