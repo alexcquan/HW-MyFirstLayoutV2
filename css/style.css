@@ -1,212 +1,102 @@
-body {
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.sectionTitle{
+    margin-top: 3%;
 
-/*Navigation*/
-.container{
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 100px;
-    grid-template-areas: 
-    "navBar . navigation";
-    background-image: linear-gradient(to right, black,rgb(0, 181, 212));
-    padding-left: 20px;
 }
-
-#navbar{
-    grid-area: navBar;
-}
-
-#navigation{
-    grid-area: navigation;
-}
-
-.navBar h1 {
-    width: 25%;
-    font-weight: 500;
-}
-
-.navBar a {
-    grid-area: a;
-    float: right;
+/*Typography*/
+h1, h2, h3 , h4, h5, h6 {
+    color: #1B6682;
+    font-family: fantasy, sans-serif;
     text-align: center;
-    justify-content: center;
-    padding: 14px 16px;
-    font-size: 17px;
 }
 
-#navigation{
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    display: block;
+    font-family: fantasy;
+}
+
+h1{
     display: flex;
-    width: 50%;
+    justify-content: center;
+}
+
+h4 {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.jumbotron h1{
+    color: white;
+}
+
+.about-heading{
+    text-align: left;
+}
+
+/*About Section*/
+
+
+/*Jumbotron*/
+.jumbotron {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/CoverPhoto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    height: calc(100vh-25px);
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.active{
-    color:white;
-}
-
-/*Page Header CSS*/
-.header h2{
-    text-align: center;
-    padding: 5px;
-}
-
-/*Hero Grid CSS*/
-.heroGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 100px;
-    grid-template-areas:
-    "aboutMe myPicture"
-    "interestingFacts myPicture"
-    "socialMedia myPicture";
-    margin:5%;
-}
-
-.aboutMe{
-    grid-area: aboutMe;
-    
-}
-.myPicture{
-    grid-area: myPicture;
-    
-  
-}
-.myPicture img{
-    max-width:100%;
-    
-}
-.interestingFacts{
-    grid-area: interestingFacts;
-    
-}
-.socialMedia{
-    grid-area: socialMedia;
-    
-}
-
-/*List CSS*/
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style-type: none;
-}
-
-.navlist{
-    font-family: fantasy;
-    font-size: 17pt;
-    padding: 20px;
-    margin: 5%;
-}
-
-.interest{
-    font-family: fantasy;
-    font-size: 17pt;
-}
-
-ol {
-    padding-left: 5%;
-    text-align: left; 
-    list-style-type: none;
-}
-
-/*Case Study Grid CSS*/
-.caseStudyGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px;
-    grid-template-areas: 
-    "study1 study2 study3";
-    margin: 5%;
-    padding: 10px;
-}
-
-.study1{
-    grid-area: study1;
-    background-image: url(../images/GDQ\ Versions.png);
-    background-size: cover;
-}
-
-.study2{
-    grid-area: study2;
-    background-color: blue;
-}
-
-.study3{
-    grid-area: study3;
-    background-color: green;
-}
-
-/*Typography*/
-h1 {
-    display: flex;
-    color: white;
-    font-family: cursive;
-}
-
-h2 {
-    color: #1B6682;
-    font-family: fantasy;
-    font-size: 24pt;
-}
-
-.header h2{
-    padding-top: 20px;
-    font-family: cursive;
-}
-h3 {
-    color: #1B6682;
-    font-family: fantasy;
-    font-size: 20pt;
-}
-
-.heroGrid h3 {
-    margin:0;
-}
-
-.caseStudy h3{
-    text-align: center;
-}
-
-p{
-    display: block;
-    text-align: left;
-    font-family: fantasy;
-    font-size: 17pt;
-    padding:0 4%;
-}
-
-.caseStudyGrid p{
+.jumboCopy {
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
     color: white;
     text-align: center;
-    background-color: rgba(0, 0, 0, .8); 
-    padding-top: 4px;   
 }
 
-/*Button CSS*/
-button{
+/*Nav*/
+.customNav{
+    max-height: 70px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+.navbar-brand img {
+    padding-right: 15px;
+    width: 65px;
+}
+
+.nav-item {
+    margin: 0px 20px;
+}
+
+/* Cards */
+.cardContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+/*Footer*/
+footer {
+    position: absolute;
     width: 100%;
-    height: 50px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    margin: 50px, 20px;
 }
 
-/*Media Query*/
-@media only screen and (max-width:600px){
-.caseStudyGrid{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-areas:
-    "study 1"
-    "study 2"
-    "study 3";
-    margin: 5%;
+.icon{
+    color: #1B6682;
     padding: 10px;
 }
 
-}
