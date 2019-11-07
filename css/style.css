@@ -75,6 +75,12 @@ h4 {
     margin: 0px 20px;
 }
 
+.nav-item:hover{
+    background-color: rgba(10, 64, 165, 0.8);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
 /* Cards */
 .cardContainer {
     text-align: center;
@@ -102,4 +108,8 @@ footer {
 
 .table {
     text-align: center;
+}
+
+.contact{
+    transform: translate(0,-70px);
 }
