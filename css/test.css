@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: paleturquoise;
+    background: #E57200;
 }
 
 .eyes{
@@ -34,4 +34,20 @@ body{
     transform: translate(-50%,-50%);
     border-radius: 50%;
     border: 15px solid #333;
+}
+
+.error{
+    text-align: center;
+    color: white;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 5%;
+    color: white;
+    background: #FFFAE8;
+    cursor: pointer;
 }
