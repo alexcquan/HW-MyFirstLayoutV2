@@ -11,6 +11,18 @@
     padding: 0;
 }
 
+.section{
+    width: 100%;
+}
+
+.section-title{
+    margin-top: 50px;
+}
+
+#about{
+    background-color: #FDEFB9;
+}
+
 /*Header Navigation Section*/
 .header {
     background-color: #E57200;
@@ -60,9 +72,6 @@
     cursor: pointer;
 }
 
-.section-title{
-    margin-top: 50px;
-}
 /*Creating Hamburger Menu with CSS*/
 .header .menu-icon .nav-icon{
     background: #333;
@@ -126,9 +135,8 @@
 
 /*Landing Section*/
 #landing{
-    width: 100%;
     height: 70vh;
-    background-color: #FFFAE8;
+    background-color: #FDEFB9;
 }
 
 /*Eyes CSS*/
@@ -203,6 +211,7 @@
     transform: translate(0, 100px);
     color: #D90000;
 }
+
 /*About Me Section*/
 #about .section-title{
     width: 100%;
@@ -283,8 +292,7 @@
 }
 /*Project Section CSS*/
 #projects{
-    width: 100%;
-    height: 100vh; 
+    height: 125vh; 
 }
 
 #projects .section-title h1{
@@ -298,22 +306,33 @@
     display: grid;
     color: #E57200;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 30vh;
+    grid-template-rows: 60vh;
     grid-template-areas: 
-    "card1 card2";
+    "card1 card2" 
+    "card3 card4";
     text-align: center;
     padding: 2px 16px;
+    margin: 0 5% 0 5%;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+.card {
+    margin: 5%;
 }
 
-.card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card img{
+    width: 100%;
+    max-height: 300px;
 }
 
+.card-text{
+    margin: 5%;
+}
+.card-description{
+    text-align: left;
+    font-size: 12px;
+    margin: 2px;
+    padding: 0 4px 0 4px;
+}
 
 /*Contact Section CSS*/
 #contact{
@@ -418,5 +437,28 @@ h2{
 
     h2{
         font-size: 24px;
+    }
+
+    /*Project*/
+    .card-container{
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows: 60vh;
+        grid-template-areas: 
+        "card1 card2 card3" 
+        "card4 . .";
+    }
+  }
+
+  @media only screen and (min-width: 1100px){
+    /*Project*/
+    .card-container{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 60vh;
+        grid-template-areas: 
+        "card1 card2 card3 card4";
+    }
+
+    #projects{
+        height: 80vh;
     }
   }
